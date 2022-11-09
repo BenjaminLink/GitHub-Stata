@@ -1,3 +1,5 @@
+** GitHub Tutorial Setup
+// Source: https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a
 
 help scheme
 
@@ -43,6 +45,19 @@ dir
 ! echo # GitHub-Stata >> README.md
 ! git init
 ! git add README.md
+! git commit -m 'my first upload from Stata'
+! git remote add origin https://github.com/BenjaminLink/GitHub-Stata.git
+! git push -u origin main
+
+
+** Versions changes #1
+sysuse auto, clear
+
+g bestCar = price <= 5000 & headroom >= 3 & weight <= 3000 & mpg >= 25
+ta bestCar
+
+! git init
+! git add GitHub_Stata.do
 ! git commit -m 'my first upload from Stata'
 ! git remote add origin https://github.com/BenjaminLink/GitHub-Stata.git
 ! git push -u origin main
